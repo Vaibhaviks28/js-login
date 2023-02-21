@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2> JavaScript Login Page(Mini project in hindi)</h2><br>
+    <div class="login">
+        <form id="login" method="get" action="login.php">
+            <label><b> User Name</b>
+            </label>
+            <input type="text" name="Uname" id="Uname" placeholder="Username">
+            <br><br>
+            <label><b>Password</b>
+            </label>
+            <input type="password" name="Pass" id="Pass" placeholder="Password">
+            <br><br>
+            <input type="button" name="log" id="log" value="Login Here" onclick="login()">
+            <br><br>
+            <input type="checkbox" id="check">
+            <span> Remember me</span>
+            <br><br>
+            Forget<a href="#">Password</a>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function login(){
+            var username=document.getElementById('Uname').value;
+            var password=document.getElementById('Pass').value;
+            if(username=='vaibhavi'&& password=='1234')
+            {
+                console.log("Login Successfully");
+                location.assign("file:///C:/xampp/htdocs/js_login/welcome.html");//need to pass other page path
+            }
+            else{
+                window.alert('Wrong username or password');
+            }
+            console.log(username);
+            console.log(password);
+        }
+      
+    </script>
+</body>
+</html>
